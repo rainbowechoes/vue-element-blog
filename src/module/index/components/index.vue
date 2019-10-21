@@ -57,26 +57,7 @@
             <el-tag type="danger">springcloud</el-tag>
           </el-card>
           <el-card class="box-card" shadow="hover" header="网站概况">
-            <el-row :gutter="24">
-              <el-col :sm="10">
-                <i class="el-icon-document"> 文章数：1543</i>
-              </el-col>
-            </el-row>
-            <el-row :gutter="24">
-              <el-col :sm="10">
-                <i class="el-icon-chat-line-round"> 评论数：1543</i>
-              </el-col>
-            </el-row>
-            <el-row :gutter="24">
-              <el-col :sm="10">
-                <i class="el-icon-view"> 访问数：1543</i>
-              </el-col>
-            </el-row>
-            <el-row :gutter="24">
-              <el-col :sm="10">
-                <i class="el-icon-price-tag"> 访问数：1543</i>
-              </el-col>
-            </el-row>
+            <statistic></statistic>
           </el-card>
         </el-col>
       </el-row>
@@ -88,6 +69,7 @@
   import Paper from './components/paper'
   import Carousel from './components/carousel'
   import Micro from './components/micro-pager'
+  import Statistic from './components/statistic'
 
   export default {
     name: 'index',
@@ -99,6 +81,7 @@
     components: {
       Carousel,
       Paper,
+      Statistic,
       Micro
     },
     methods: {
