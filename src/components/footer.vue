@@ -5,7 +5,7 @@
         <router-link to="/"><el-link style="font-size: 26px">Echo</el-link></router-link>
       </el-col>
       <el-col :sm="6" :offset="3" style="line-height: 40px">
-        Lorem ipsum dolor sit amet.
+        在变幻的生命里，时间才是最大的小偷
       </el-col>
       <el-col :sm="9" :offset="3">
         <el-input

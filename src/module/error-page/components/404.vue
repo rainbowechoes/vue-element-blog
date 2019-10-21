@@ -9,12 +9,10 @@
       </div>
       <div class="bullshit">
         <div class="bullshit__oops">OOPS!</div>
-        <div class="bullshit__info">All rights reserved
-          <a style="color:#20a0ff" href="https://wallstreetcn.com" target="_blank">wallstreetcn</a>
-        </div>
         <div class="bullshit__headline">{{ message }}</div>
-        <div class="bullshit__info">Please check that the URL you entered is correct, or click the button below to return to the homepage.</div>
-        <a href="" class="bullshit__return-home">Back to home</a>
+        <div class="bullshit__info">请确保你输入了正确的地址，或者点击下面这个按钮回到主页</div>
+        <!--<router-link to="/"><el-link class="bullshit__return-home"></el-link></router-link>-->
+        <router-link to="/"><a href="" class="bullshit__return-home">点我回到主页</a></router-link>
       </div>
     </div>
   </div>
@@ -34,15 +32,19 @@
 <style lang="scss" scoped>
 .wscn-http404-container{
   transform: translate(-50%,-50%);
-  position: absolute;
-  top: 40%;
-  left: 50%;
+  position: relative;
+  top: 150px;
+  left: 600px;
+  width: 1000px;
+  margin-top: 50px;
 }
 .wscn-http404 {
   position: relative;
   width: 1200px;
   padding: 0 50px;
   overflow: hidden;
+  /*top: 80%;*/
+  /*left: 60%;*/
   .pic-404 {
     position: relative;
     float: left;
@@ -160,6 +162,7 @@
     width: 300px;
     padding: 30px 0;
     overflow: hidden;
+
     &__oops {
       font-size: 32px;
       font-weight: bold;
