@@ -27,7 +27,7 @@
               <el-col :sm="4">
                 <router-link to="/"><el-link style="font-size: 10px" type="primary">More...</el-link></router-link>
               </el-col>
-              <el-col :sm="16">by rainbow. 2018-8-15. <i class="el-icon-chat-round"> 12</i></el-col>
+              <el-col :sm="9" :offset="11">by rainbow. 2018-8-15. <i class="el-icon-chat-round"> 12</i></el-col>
             </el-row>
           </el-col>
         </el-row>

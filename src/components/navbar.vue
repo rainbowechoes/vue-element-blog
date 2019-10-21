@@ -30,6 +30,7 @@
           <!--</el-submenu>-->
           <el-menu-item index="3">学习资源</el-menu-item>
           <el-menu-item index="4">随笔</el-menu-item>
+          <el-menu-item index="5">留言板</el-menu-item>
         </el-menu>
       </el-col>
     </el-row>
