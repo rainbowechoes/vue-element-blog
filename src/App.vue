@@ -9,18 +9,10 @@
       <!-- header end -->
       <!--<router-view/>-->
       <el-main>
-        <router-view />
-        <div class="blog-container">
-          <el-row :gutter="24" style="margin-top: 20px">
-            <el-col :sm="8">
-              <el-pagination
-                background
-                layout="prev, pager, next"
-                :total="1000">
-              </el-pagination>
-            </el-col>
-          </el-row>
+        <div v-if="invalidRoute">
+          <page404></page404>
         </div>
+        <router-view />
       </el-main>
       <!-- footer begin -->
       <el-footer height="100%" class="blog-header">
@@ -34,6 +26,7 @@
 <script>
 import Navbar from '@/components/navbar'
 import Tailner from '@/components/footer'
+import Page404 from '@/module/error-page/components/404'
 
 export default {
   name: 'App',
@@ -46,11 +39,17 @@ export default {
   },
   components: {
     Navbar,
-    Tailner
+    Tailner,
+    Page404
   },
   methods: {
     handleSelect (key, keyPath) {
       // console.log(key, keyPath);
+    }
+  },
+  computed: {
+    invalidRoute () {
+      return !this.$route.matched || this.$route.matched.length === 0;
     }
   }
 }
