@@ -56,6 +56,11 @@
         activeName: 'first'
       }
     },
+    methods: {
+      handleClick(tab, event) {
+        console.log(tab, event, this.activeName);
+      }
+    },
     components: {
       Micro,
       Statistic
