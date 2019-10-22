@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-container">
+  <div>
     <el-row :gutter="24" style="margin-top: 20px">
       <el-col :sm="8">
         <el-pagination

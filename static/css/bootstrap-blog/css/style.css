@@ -18,14 +18,14 @@ Version: 1.0
 	10. INSTAGRAM FEED
 	11. TWITTERFEED
 	12. RESPONSIVE STYLES
-	
+
 -------------------------------------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Hind+Vadodara:300,400,500,600,700');
 @import url('ts.css');
 
 /* =============================
-   1. GLOBAL STYLES 
+   1. GLOBAL STYLES
 ================================ */
 
 body {
@@ -596,7 +596,7 @@ padding:5px 15px 5px 40px;
 }
 
 .megamenu > .dropdown-menu {
-    padding: 10px;	
+    padding: 10px;
 }
 
 }
@@ -743,7 +743,7 @@ padding:5px 15px 5px 40px;
 }
 
 #tab-1 {
- display: block;   
+ display: block;
 }
 
 .menu-tabs .col-md-3,
@@ -799,7 +799,7 @@ padding:5px 15px 5px 40px;
 	padding:30px 20px;
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,.5);
 	-moz-box-shadow: 0 0 50px rgba(0,0,0,.5);
-	box-shadow: 0 0 50px rgba(0,0,0,.5);	
+	box-shadow: 0 0 50px rgba(0,0,0,.5);
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
 	-o-transition: all 0.5s ease;
@@ -1820,7 +1820,7 @@ article.style5.style3.single .h1 {
 
 .comments ul li .comment-content {
 	border-top: 1px solid #eeeeee;
-	padding: 25px 0 25px 55px;
+	padding: 25px 0 0 55px;
 	position: relative;
 }
 
