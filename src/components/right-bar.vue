@@ -46,8 +46,8 @@
 </template>
 
 <script>
-  import Micro from './micro-pager'
-  import Statistic from './statistic'
+  import Micro from '../module/index/components/components/micro-pager'
+  import Statistic from '../module/index/components/components/statistic'
 
   export default {
     name: 'right-bar',
@@ -69,7 +69,4 @@
 </script>
 
 <style scoped>
-  .info-card {
-    margin-bottom: 20px;
-  }
 </style>

@@ -17,7 +17,7 @@
   import Pagination from '@/components/pagination'
   import Carousel from './components/carousel'
   import Left from './components/left-bar'
-  import Right from './components/right-bar'
+  import Right from '../../../components/right-bar'
 
   export default {
     name: 'index',

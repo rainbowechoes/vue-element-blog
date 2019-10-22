@@ -10,7 +10,7 @@
 
 <script>
   import Result from './components/search-result'
-  import Right from '@/module/index/components/components/right-bar'
+  import Right from '@/components/right-bar'
   import Pagination from '@/components/pagination'
 
   export default {
