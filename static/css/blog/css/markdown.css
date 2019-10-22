@@ -1,0 +1,94 @@
+#context h1,
+#context h2,
+#context h3,
+#context h4,
+#context h5,
+#context h6 {
+    letter-spacing: 1px;
+    margin: 15px 0;
+    padding: 10px;
+    border-left: 5px solid #e40000;
+    border-bottom: 1px solid red;
+    color: #EC356C;
+}
+
+#context p {
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+    font: 16px "Times New Roman" , Helvetica, Arial, Lucida Grande, Tahoma, sans-serif, "Microsoft YaHei";
+    font-style: normal;
+    line-height: normal;
+    font-family: "Times New Roman", Helvetica, Arial, Lucida Grande, Tahoma, sans-serif, "Microsoft YaHei";
+    color: #444;
+}
+
+#context pre {
+    margin: 0 0 10px 0;
+    padding: 8px;
+}
+
+#context code {
+    font-size: 14px;
+    font-family: Consolas, "Source Code Pro";
+}
+
+#context img {
+    margin: 5px auto;
+}
+
+#context ol > li {
+    list-style: decimal;
+    margin: 5px auto;
+}
+
+#context ul > li {
+    margin: 5px auto;
+    list-style: circle;
+}
+
+#context ul > li, #context ol > li {
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: #444444;
+}
+
+#context ol, ul {
+    margin: auto 1em;
+}
+
+#context a {
+    color: #338acc;
+}
+
+#context a:visited {
+    color: #338acc;
+}
+
+#context a:hover {
+    color: rgba(208, 90, 21, 0.71);
+}
+
+/* table 样式 */
+#context table{
+    margin-top:15px;
+    border-collapse:collapse;
+    border:1px solid #aaa;
+    width:100%;
+}
+#context table th {
+    padding:5px 15px 5px 6px;
+    background-color:#3F3F3F;
+    border:1px solid #3F3F3F;
+    text-align: center;
+    color:#fff;
+}
+#context table td {
+    padding:6px 15px 6px 6px;
+    border:1px solid #aaa;
+}
+#context table tr:nth-child(odd) {
+    background-color:#F5F5F5;
+}
+#context table tr:nth-child(even) {
+    background-color:#fff;
+}
