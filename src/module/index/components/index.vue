@@ -8,21 +8,13 @@
         <right></right>
       </el-row>
     </div>
-    <div class="blog-container">
-      <el-row :gutter="24" style="margin-top: 20px">
-        <el-col :sm="8">
-          <el-pagination
-            background
-            layout="prev, pager, next"
-            :total="1000">
-          </el-pagination>
-        </el-col>
-      </el-row>
-    </div>
+
+    <pagination></pagination>
   </div>
 </template>
 
 <script>
+  import Pagination from '@/components/pagination'
   import Carousel from './components/carousel'
   import Left from './components/left-bar'
   import Right from './components/right-bar'
@@ -32,7 +24,8 @@
     components: {
       Carousel,
       Left,
-      Right
+      Right,
+      Pagination
     },
     methods: {
       handleClick(tab, event) {
