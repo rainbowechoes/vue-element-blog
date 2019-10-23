@@ -7,17 +7,17 @@
     </el-row>
     <el-row :gutter="24">
       <el-col :sm="10" class="info-col">
-        <i class="el-icon-chat-line-round"> <span class="statistic-title"> 评论数</span>：1543</i>
+        <i class="el-icon-chat-line-round"> <span class="statistic-title"> 评论数：</span>1543</i>
       </el-col>
     </el-row>
     <el-row :gutter="24">
       <el-col :sm="10" class="info-col">
-        <i class="el-icon-view"> <span class="statistic-title"> 访问数</span>：1543</i>
+        <i class="el-icon-view"> <span class="statistic-title"> 访问数：</span>1543</i>
       </el-col>
     </el-row>
     <el-row :gutter="24">
       <el-col :sm="10" class="info-col">
-        <i class="el-icon-price-tag"> <span class="statistic-title"> 标签数</span>：1543</i>
+        <i class="el-icon-price-tag"> <span class="statistic-title"> 标签数：</span>1543</i>
       </el-col>
     </el-row>
   </div>

@@ -1820,14 +1820,14 @@ article.style5.style3.single .h1 {
 
 .comments ul li .comment-content {
 	border-top: 1px solid #eeeeee;
-	padding: 25px 0 0 55px;
+	padding: 10px 0 0 55px;
 	position: relative;
 }
 
 .comments ul li .comment-content img {
 	position: absolute;
 	left: 0;
-	top: 30px;
+	top: 5px;
 }
 
 .comments ul li.sub-comment {
