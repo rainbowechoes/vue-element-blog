@@ -25,6 +25,8 @@
             <div class="clearfix"></div>
           </div>
         </el-card>
+
+        <!-- 版权说明 -->
         <el-card shadow="hover" class="info-card">
           <el-row :gutter="24">
             <el-col :span="2">
@@ -46,6 +48,28 @@
             </el-col>
           </el-row>
         </el-card>
+
+        <!-- 相关及最新 -->
+        <el-row :gutter="24">
+          <el-col :span="12">
+            <el-card shadow="hover" class="info-card" header="相关文章">
+              <div v-for="i in 4" :key="i">
+                <router-link to="/" class="article-link">
+                  <el-link icon="el-icon-arrow-right" :underline="false">Lorem ipsum dolor sit.</el-link>
+                </router-link>
+              </div>
+            </el-card>
+          </el-col>
+          <el-col :span="12">
+            <el-card shadow="hover" class="info-card" header="最新文章">
+              <div v-for="i in 4" :key="i">
+                <router-link to="/" class="article-link">
+                  <el-link icon="el-icon-arrow-right" :underline="false">Lorem ipsum dolor sit.</el-link>
+                </router-link>
+              </div>
+            </el-card>
+          </el-col>
+        </el-row>
 
         <!-- 评论内容 -->
         <el-card class="info-card" shadow="hover" header="热门评论">
@@ -100,8 +124,10 @@
             </ul>
           </div>
         </el-card>
+
         <!-- 分页 -->
         <pagination class="info-card"></pagination>
+
         <!-- 评论发表 -->
         <el-card shadow="hover" header="发表评论">
           <div class="comment-form" id="comment-form" style="padding: 0">
@@ -169,5 +195,9 @@
   }
   .instruction-title {
     font-weight: bold;
+  }
+
+  .article-link {
+    margin-left: -180px;
   }
 </style>
