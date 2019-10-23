@@ -3,7 +3,7 @@
     <el-backtop target="#app"></el-backtop>
     <el-container>
       <!-- header begin -->
-      <el-header class="blog-header" height="100px">
+      <el-header :style="headerStyle" class="blog-header" height="100px">
         <navbar></navbar>
       </el-header>
       <!-- header end -->
@@ -34,8 +34,27 @@ export default {
     return {
       activeIndex: '1',
       activeIndex2: '1',
-      input: ''
-    };
+      input: '',
+      fixStyle: {
+        boxShadow: '0 10px 60px -5px #c1c1c5',
+        position: 'sticky',
+        top: '0',
+        zIndex: '999'
+      },
+      normalStyle: {
+        position: 'sticky',
+        top: '0',
+        zIndex: '999'
+      },
+      headerStyle: {
+        position: 'sticky',
+        top: '0',
+        zIndex: '999'
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.scrollHandler);
   },
   components: {
     Navbar,
@@ -45,6 +64,14 @@ export default {
   methods: {
     handleSelect (key, keyPath) {
       // console.log(key, keyPath);
+    },
+    scrollHandler () {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      if (scrollTop >= 380) {
+        this.headerStyle = this.fixStyle;
+      } else {
+        this.headerStyle = this.normalStyle;
+      }
     }
   },
   computed: {
@@ -62,26 +89,19 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    background-color: #f5f8f9;
     margin: 0;
-    overflow: hidden;
-    overflow-y: scroll;
   }
   html,body,#app {
     /*设置内部填充为0，几个布局元素之间没有间距*/
     padding: 0;
     /*外部间距也是如此设置*/
     margin: 0;
+    background-color: #f5f8f9;
     /*统一设置高度为100%*/
     height: 100%;
   }
   .blog-header {
     padding: 0;
     background-color: white;
-  }
-  .blog-container {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
   }
 </style>

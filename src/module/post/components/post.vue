@@ -98,8 +98,9 @@
 <script>
   import Tinymce from 'vue-tinymce-editor'
   import '../../../../static/tinymce/zh_CN'
-  import Right from '@/components/right-bar'
   import Pagination from '@/components/pagination'
+  import Right from '@/components/right-bar'
+
   export default {
     name: 'post',
     data () {
