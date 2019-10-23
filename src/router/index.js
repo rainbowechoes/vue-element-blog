@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Index from '@/module/index/components/index'
 import Search from '@/module/search/components/search'
 import Post from '@/module/post/components/post'
+import Demo from '@/module/demo/components/demo'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/post/*',
       name: '文章',
       component: Post
+    },
+    {
+      path: '/demo',
+      name: 'demo',
+      component: Demo
     }
   ]
 })
