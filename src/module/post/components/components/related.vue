@@ -39,11 +39,11 @@
 
   .article-route .article-link {
     width: 300px;
-    display: -webkit-box; /*作为弹性伸缩盒子模型显示*/
-    -webkit-line-clamp: 1; /*显示的行数；如果要设置2行加...则设置为2*/
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
     overflow: hidden;
-    text-overflow: ellipsis; /* 溢出用省略号*/
-    -webkit-box-orient: vertical;/*伸缩盒子的子元素排列：从上到下*/
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
   }
 
   .article-link-card {

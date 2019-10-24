@@ -8,7 +8,7 @@
       </div>
     </el-card>
     <el-card class="box-card info-card" shadow="hover" header="排行">
-      <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+      <el-tabs v-model="activeName" type="card">
         <el-tab-pane label="最受欢迎" name="first">
           <div class="micro-articles">
             <micro></micro>
@@ -57,9 +57,6 @@
       }
     },
     methods: {
-      handleClick(tab, event) {
-        console.log(tab, event, this.activeName);
-      }
     },
     components: {
       Micro,
