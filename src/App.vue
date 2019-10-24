@@ -1,6 +1,21 @@
 <template>
   <div id="app">
-    <el-backtop target="#app"></el-backtop>
+    <!--<el-backtop target="#app"></el-backtop>-->
+    <!-- 手动结合backTop源码与导航条fix功能 -->
+    <transition name="el-fade-in">
+      <div
+        v-if="visible"
+        @click.stop="handleClick"
+        :style="{
+        'right': styleRight,
+        'bottom': styleBottom
+      }"
+        class="el-backtop">
+        <slot>
+          <el-icon name="caret-top"></el-icon>
+        </slot>
+      </div>
+    </transition>
     <el-container>
       <!-- header begin -->
       <el-header :style="headerStyle" class="blog-header" height="100px">
@@ -28,8 +43,26 @@ import Navbar from '@/components/navbar'
 import Tailner from '@/components/footer'
 import Page404 from '@/module/error-page/components/404'
 
+import throttle from 'throttle-debounce/throttle';
+
 export default {
   name: 'App',
+  props: {
+    visibilityHeight: {
+      type: Number,
+      default: 200
+    },
+    // 跳转的锚点dom对象
+    target: '#app',
+    right: {
+      type: Number,
+      default: 40
+    },
+    bottom: {
+      type: Number,
+      default: 40
+    }
+  },
   data () {
     return {
       activeIndex: '1',
@@ -50,34 +83,82 @@ export default {
         position: 'sticky',
         top: '0',
         zIndex: '999'
-      }
+      },
+      el: null,
+      container: null,
+      visible: false
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.scrollHandler);
+    // window.addEventListener('scroll', this.scrollHandler);
+    this.init();
+    this.throttledScrollHandler = throttle(300, this.onScroll);
+    this.container.addEventListener('scroll', this.throttledScrollHandler);
   },
   components: {
     Navbar,
     Tailner,
-    Page404
+    Page404,
+    throttle
   },
   methods: {
     handleSelect (key, keyPath) {
       // console.log(key, keyPath);
     },
-    scrollHandler () {
-      let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      if (scrollTop >= 380) {
+    init() {
+      this.container = document;
+      this.el = document.documentElement;
+      if (this.target) {
+        this.el = document.querySelector(this.target);
+        if (!this.el) {
+          throw new Error(`target is not existed: ${this.target}`);
+        }
+        this.container = this.el;
+      }
+    },
+    onScroll() {
+      // 处理回到顶部按钮是否可见
+      const scrollTop = this.el.scrollTop;
+      this.visible = scrollTop >= this.visibilityHeight;
+
+      // 处理导航条fix定位并绑定样式
+      let scrollDistance = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      if (scrollDistance >= 380) {
         this.headerStyle = this.fixStyle;
       } else {
         this.headerStyle = this.normalStyle;
       }
+    },
+    handleClick(e) {
+      this.scrollToTop();
+      this.$emit('click', e);
+    },
+    scrollToTop() {
+      let el = this.el;
+      let step = 0;
+      let interval = setInterval(() => {
+        if (el.scrollTop <= 0) {
+          clearInterval(interval);
+          return;
+        }
+        step += 10;
+        el.scrollTop -= step;
+      }, 20);
     }
   },
   computed: {
     invalidRoute () {
       return !this.$route.matched || this.$route.matched.length === 0;
+    },
+    styleBottom() {
+      return `${this.bottom}px`;
+    },
+    styleRight() {
+      return `${this.right}px`;
     }
+  },
+  beforeDestroy() {
+    this.container.removeEventListener('scroll', this.throttledScrollHandler);
   }
 }
 </script>
