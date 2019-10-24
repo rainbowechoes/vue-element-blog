@@ -9,6 +9,10 @@ import '../static/css/common.css'
 // import Login from '@/module/demo/components/Login'
 // import Register from '@/module/demo/components/Register'
 
+// 每次跳转后回到顶部
+router.afterEach((to, fromm, next) => {
+  window.scrollTo(0, 0);
+})
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 
