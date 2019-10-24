@@ -688,7 +688,7 @@
             event.preventDefault();
         }
 
-        // If target is not the <li> element (ie: a child), find the <li>.
+        // If target is not the <li> element (ie: a childrens), find the <li>.
         if(!$target.is('li')) {
             $target = $target.closest('li');
         }

@@ -1836,6 +1836,7 @@ article.style5.style3.single .h1 {
 
 .comment-title {
 	color: #222222;
+  float: left;
 	margin-bottom: 5px;
 }
 
