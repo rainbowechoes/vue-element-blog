@@ -8,7 +8,7 @@
       </div>
     </el-card>
     <el-card class="box-card info-card" shadow="hover" header="排行">
-      <el-tabs v-model="activeName" type="card">
+      <el-tabs v-model="listActiveName" type="card">
         <el-tab-pane label="最受欢迎" name="first">
           <div class="micro-articles">
             <micro></micro>
@@ -33,11 +33,12 @@
       </el-tabs>
     </el-card>
     <el-card class="box-card info-card" shadow="hover" header="标签">
-      <el-tag>java</el-tag>
-      <el-tag type="success">python</el-tag>
-      <el-tag type="info">javascript</el-tag>
-      <el-tag type="warning">springboot</el-tag>
-      <el-tag type="danger">springcloud</el-tag>
+      <router-link to="/post/dfsd">
+        <el-tag>java</el-tag>
+      </router-link>
+      <router-link to="/post/fsdf">
+        <el-tag type="success">python</el-tag>
+      </router-link>
     </el-card>
     <el-card class="box-card" shadow="hover" header="网站概况">
       <statistic></statistic>
@@ -53,7 +54,7 @@
     name: 'right-bar',
     data () {
       return {
-        activeName: 'first'
+        listActiveName: 'first'
       }
     },
     methods: {

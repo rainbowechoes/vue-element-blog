@@ -35,5 +35,6 @@ export default {
   }
   .info-col {
     margin: 2px 0;
+    font-size: 13px;
   }
 </style>

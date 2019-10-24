@@ -13,7 +13,7 @@
         </el-input>
       </el-col>
       <el-col :sm="10">
-        <el-menu :default-active="activeIndex" mode="horizontal" @select="handleSelect">
+        <el-menu mode="horizontal">
           <el-menu-item index="1">编程语言</el-menu-item>
           <el-menu-item index="2">后端开发</el-menu-item>
           <!--<el-submenu index="2">-->
@@ -39,7 +39,12 @@
 
 <script>
 export default {
-  name: 'navbar'
+  name: 'navbar',
+  data () {
+    return {
+      input: ''
+    }
+  }
 }
 </script>
 
