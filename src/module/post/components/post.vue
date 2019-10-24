@@ -23,7 +23,7 @@
   import ArticleDetail from './components/article-detail'
   import Related from './components/related'
   import Comment from './components/comment'
-  import Reviewer from './components/reviewer'
+  import Reviewer from '../../../components/reviewer'
 
   export default {
     name: 'post',
