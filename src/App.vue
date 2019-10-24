@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!--<el-backtop target="#app"></el-backtop>-->
     <!-- 手动结合backTop源码与导航条fix功能 -->
     <transition name="el-fade-in">
       <div
