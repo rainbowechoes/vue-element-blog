@@ -28,14 +28,14 @@ npm test
 
 # 效果
 首页
-![https://github.com/rainbowechoes/vue-element-blog/blob/master/assets/md_img/index-page.jpg]()
+![](./assets/md_img/index-page.jpg)
 
 文章详情页面
-![https://github.com/rainbowechoes/vue-element-blog/blob/master/assets/md_img/post-page.jpg]()
-![https://github.com/rainbowechoes/vue-element-blog/blob/master/assets/md_img/post-after-page.jpg]()
+![](./assets/md_img/post-page.jpg)
+![](./assets/md_img/post-after-page.jpg)
 
 留言板页面
-![https://github.com/rainbowechoes/vue-element-blog/blob/master/assets/md_img/message-board.jpg]()
+![](./assets/md_img/message-board.jpg)
 
 404 页面
-![https://github.com/rainbowechoes/vue-element-blog/blob/master/assets/md_img/404.jpg]()
+![](./assets/md_img/404.jpg)
