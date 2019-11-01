@@ -28,6 +28,8 @@ npm test
 
 # 效果
 GitHub上如果没有效果，可以前往码云查看：https://gitee.com/rainbowecho/vue-element-blog
+
+
 首页
 ![](./assets/md_img/index-page.jpg)
 
